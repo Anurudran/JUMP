@@ -23,7 +23,7 @@ def play_game():
         print(f"You lost the number to guess was {random_num}")
         comp_score += 1
         msg = f"Guessing game: Computer won :( Scores are: player has {player_score} points, computer has {comp_score} points"
-    with open('example.txt', 'a') as file:
+    with open('game_history.txt', 'a') as file:
         file.write(f'{msg}\n')
 
 

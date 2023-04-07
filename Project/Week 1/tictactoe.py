@@ -28,9 +28,7 @@ def render():
     ---------------------
     BOARD : dict
     '''
-    # ----------------
-    # INSERT CODE HERE
-    # ----------------
+
     board_state = ""
     for i, key in enumerate(BOARD):
         if i == 2 or i == 5:
@@ -67,14 +65,12 @@ def get_action(player):
     *Note: Implementing a while loop in this function is recommended,
     but make sure you aren't coding any infinite loops.
     '''
-    # ----------------
-    # INSERT CODE HERE
-    # ----------------
+
 
     while True:
         try:
             num = int(input("Pick a number on the board: "))
-        except ValueError:
+        except ValueError or TypeError:
             print("Input must be an integer")
         else:
             if 1 <= num <= 9 and BOARD[num] == str(num):
@@ -100,9 +96,7 @@ def victory_message(player):
     ---------------------
     print_t3() : func
     '''
-    # ----------------
-    # INSERT CODE HERE
-    # ----------------
+
     print(render())
     if player == "X":
         global playerX_score
@@ -111,7 +105,7 @@ def victory_message(player):
         global playerO_score
         playerO_score += 1
     msg = f"The winner of this TicTacToe game is player {player}: Player X score is {playerX_score}, Player O score is {playerO_score}, and draws is {draw_score}"
-    with open('example.txt', 'a') as file:
+    with open('game_history.txt', 'a') as file:
         file.write(f"{msg}\n")
     print(msg)
 
@@ -137,9 +131,7 @@ def check_win(player):
     BOARD : dict
     victory_message(player) : func
     '''
-    # ----------------
-    # INSERT CODE HERE
-    # ----------------
+
     # Check rows
     if BOARD[1] == player and BOARD[2] == player and BOARD[3] == player:
         victory_message(player)
@@ -220,6 +212,9 @@ def play_t3():
             print("Tie game -_-")
             global draw_score
             draw_score += 1
+            msg = f"It was a draw for this tictactoe game: Player X score is {playerX_score}, Player O score is {playerO_score}, and draws is {draw_score}"
+            with open('game_history.txt', 'a') as file:
+                file.write(f"{msg}\n")
             game_over = True
             break
 

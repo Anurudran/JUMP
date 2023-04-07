@@ -1,0 +1,8 @@
+----------------------------New Game History-------------------------------
+----------------------------New Game History-------------------------------
+----------------------------New Game History-------------------------------
+The winner of this TicTacToe game is player X: Player X score is 1, Player O score is 0, and draws is 0
+----------------------------New Game History-------------------------------
+The winner of this TicTacToe game is player X: Player X score is 1, Player O score is 0, and draws is 0
+Rock Paper Scissors Game: The final overall score for this game is you have 1 points, player 2 has 0 points and computer has 0 points and draws are 0
+Guessing game: Computer won :( Scores are: player has 0 points, computer has 1 points

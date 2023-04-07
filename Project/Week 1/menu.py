@@ -2,7 +2,7 @@ import rps_new, guess_game, tictactoe
 # This game is to select the game the user wants
 
 print("----------------------Main Menu---------------------------------")
-with open('example.txt', 'a') as file:
+with open('game_history.txt', 'a') as file:
     file.write('----------------------------New Game History-------------------------------\n')
 
 games = ["1", "2", "3", "exit"]

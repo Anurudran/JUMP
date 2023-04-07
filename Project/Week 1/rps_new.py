@@ -29,12 +29,12 @@ Choose your opponent:
 
     rounds = ["0", "3", "5"]
 
-    scenario = input("Pick number of rounds: 0 (infinite), 3 (best of 3), 5 (best of 5) ")
+    scenario = input("Pick number of rounds: 0 (infinite), 3, or 5: ")
 
     # Goes through a loop to see which game mode the user chooses
     while scenario not in rounds:
         print("Pick a correct game mode")
-        scenario = input("Pick number of rounds: 0 (infinite), 3 (best of 3), 5 (best of 5) ")
+        scenario = input("Pick number of rounds: 0 (infinite), 3, 5 ")
 
     while True:
         #Change the rounds to an int
@@ -104,9 +104,7 @@ Choose your opponent:
         else:
             print("Tie game -_-")
             final_draw_score += 1
-    msg_1 = f"Game score are you is: {p1_score}, {opponent} score is: {comp_score}, draws is {draw_score}"
-    msg_2 = f"Rock Paper Scissors Game: The final overall score for this game is you have {final_p1_score} points, player 2 has {final_p2_score} points and computer has {final_comp_score} points and draws are {final_draw_score}"
-    with open('example.txt', 'a') as file:
-        file.write(f"{msg_1}\n")
-        file.write(f"{msg_2}\n")
+    msg = f"Rock Paper Scissors Game: The final overall score for this game is you have {final_p1_score} points, player 2 has {final_p2_score} points and computer has {final_comp_score} points and draws are {final_draw_score}"
+    with open('game_history.txt', 'a') as file:
+        file.write(f"{msg}\n")
 
